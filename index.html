@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BankJobs.io — Your Dream Bank Job Awaits</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Manrope', 'Circular', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'] },
+        colors: {
+          brand: {
+            50:  '#eff6ff',
+            100: '#dbeafe',
+            200: '#bfdbfe',
+            500: '#3b82f6',
+            600: '#2563eb',
+            700: '#1d4ed8',
+            800: '#1e3a8a',
+            900: '#0b1e4b'
+          }
+        },
+        boxShadow: {
+          soft: '0 4px 20px -2px rgba(15, 23, 42, 0.08)',
+          card: '0 2px 12px -2px rgba(15, 23, 42, 0.06)',
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="font-sans bg-white text-slate-900 antialiased" style="font-feature-settings:'ss01','cv11'; letter-spacing:-0.01em;">
+
+<!-- TOP NAVIGATION (public pages) -->
+<header id="public-nav" class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-slate-100">
+  <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#/" class="flex items-center gap-2">
+      <div class="w-7 h-7 rounded-md bg-brand-600 text-white grid place-items-center text-sm font-bold">B</div>
+      <span class="text-[15px] font-bold tracking-tight text-slate-900">BankJobs<span class="text-brand-600">.io</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-[13px] font-medium text-slate-500">
+      <a href="#/bank-jobs" class="hover:text-slate-900">Bank Jobs</a>
+      <a href="#/bfsi-jobs" class="hover:text-slate-900">BFSI Jobs</a>
+      <a href="#/eligibility" class="hover:text-slate-900">Eligibility</a>
+      <a href="#/aptitude" class="hover:text-slate-900">Aptitude</a>
+      <a href="#/interview" class="hover:text-slate-900">Interview Prep</a>
+      <a href="#/more-jobs" class="hover:text-slate-900">Resources</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="#/login" id="nav-login" class="text-[13px] font-medium text-slate-700 hover:text-slate-900 px-3 py-1.5">Login</a>
+      <a href="#/login" id="nav-signup" class="text-[13px] font-semibold bg-slate-900 text-white px-3.5 py-1.5 rounded-md hover:bg-brand-700 transition">Sign up</a>
+      <a href="#/dashboard" id="nav-dashboard" class="hidden text-[13px] font-semibold bg-slate-900 text-white px-3.5 py-1.5 rounded-md hover:bg-brand-700 transition">Dashboard</a>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN VIEW SLOT -->
+<main id="view" class="min-h-[80vh]"></main>
+
+<!-- FOOTER -->
+<footer id="public-footer" class="border-t border-slate-100 bg-white mt-20">
+  <div class="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-4 gap-8 text-[13px]">
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <div class="w-6 h-6 rounded-md bg-brand-600 text-white grid place-items-center text-xs font-bold">B</div>
+        <span class="font-bold text-slate-900">BankJobs.io</span>
+      </div>
+      <p class="text-slate-500 leading-relaxed">India's trusted platform for Bank & BFSI careers.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold text-slate-900 mb-3 text-xs uppercase tracking-wider">Explore</h4>
+      <ul class="space-y-2 text-slate-500">
+        <li><a href="#/bank-jobs" class="hover:text-slate-900">Bank Jobs</a></li>
+        <li><a href="#/bfsi-jobs" class="hover:text-slate-900">BFSI Jobs</a></li>
+        <li><a href="#/eligibility" class="hover:text-slate-900">Check Eligibility</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold text-slate-900 mb-3 text-xs uppercase tracking-wider">Prepare</h4>
+      <ul class="space-y-2 text-slate-500">
+        <li><a href="#/aptitude" class="hover:text-slate-900">Aptitude Practice</a></li>
+        <li><a href="#/interview" class="hover:text-slate-900">Interview Questions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold text-slate-900 mb-3 text-xs uppercase tracking-wider">Company</h4>
+      <ul class="space-y-2 text-slate-500">
+        <li>About</li><li>Contact</li><li>Privacy</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-slate-100 text-center text-xs text-slate-400 py-4">© 2026 BankJobs.io · All rights reserved.</div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast" class="fixed bottom-6 right-6 hidden bg-slate-900 text-white text-sm px-4 py-3 rounded-lg shadow-soft z-50"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

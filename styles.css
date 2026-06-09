@@ -1,0 +1,240 @@
+/* BankJobs.io — Minimal design system
+   Type: Manrope (Circular-style)
+   Surface: white + slate-50 wash, hairline borders, near-zero shadows */
+
+:root {
+  --border: #eef2f6;
+  --border-strong: #e2e8f0;
+  --muted: #64748b;
+  --text: #0f172a;
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, sans-serif; }
+
+/* ── Typographic refinements ──────────────────────────────────────── */
+h1, h2, h3, h4 { letter-spacing: -0.022em; }
+.tight { letter-spacing: -0.025em; }
+
+/* ── Subtle surfaces ──────────────────────────────────────────────── */
+.gradient-hero {
+  background: linear-gradient(180deg, #fafbfd 0%, #ffffff 100%);
+}
+.surface { background: #ffffff; border: 1px solid var(--border); border-radius: 12px; }
+.surface-muted { background: #fafbfd; border: 1px solid var(--border); border-radius: 12px; }
+.hairline { border-color: var(--border); }
+.divider { border-top: 1px solid var(--border); }
+
+/* ── Dot grid (subtle) ────────────────────────────────────────────── */
+.dot-pattern {
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ── Chips & tags ─────────────────────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #475569;
+  letter-spacing: 0;
+}
+.chip-brand { background: #eef4ff; color: #1d4ed8; }
+.chip-success { background: #ecfdf5; color: #047857; }
+.chip-amber { background: #fffbeb; color: #b45309; }
+
+/* ── Cards ────────────────────────────────────────────────────────── */
+.job-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color .15s ease, background .15s ease;
+}
+.job-card:hover {
+  border-color: #cbd5e1;
+  background: #fcfcfd;
+}
+
+.cat-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 0.75rem;
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.cat-card:hover { border-color: #cbd5e1; background: #fcfcfd; }
+
+/* ── Tabs ─────────────────────────────────────────────────────────── */
+.tab-active {
+  color: var(--text);
+  border-bottom: 2px solid var(--text);
+}
+
+/* ── Stepper ──────────────────────────────────────────────────────── */
+.step-dot {
+  width: 24px; height: 24px;
+  border-radius: 9999px;
+  display: grid; place-items: center;
+  font-weight: 600; font-size: 0.72rem;
+  background: #f1f5f9; color: #94a3b8;
+  border: 1px solid var(--border);
+}
+.step-dot.active { background: var(--text); color: white; border-color: var(--text); }
+.step-dot.done   { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+
+/* ── Buttons ──────────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--text); color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600; font-size: 0.82rem;
+  letter-spacing: -0.005em;
+  transition: background .15s, transform .05s;
+}
+.btn-primary:hover { background: #1f2937; }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled { background: #cbd5e1; cursor: not-allowed; }
+
+.btn-brand {
+  background: var(--brand); color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600; font-size: 0.82rem;
+  transition: background .15s;
+}
+.btn-brand:hover { background: var(--brand-dark); }
+
+.btn-outline {
+  border: 1px solid var(--border-strong); color: #334155;
+  padding: 0.55rem 0.95rem; border-radius: 8px;
+  font-weight: 500; font-size: 0.82rem;
+  background: white;
+}
+.btn-outline:hover { border-color: #94a3b8; color: #0f172a; }
+
+/* ── Forms ────────────────────────────────────────────────────────── */
+.input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: white;
+  color: var(--text);
+  font-family: inherit;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--text);
+  box-shadow: 0 0 0 3px rgba(15,23,42,0.06);
+}
+.label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 0.3rem;
+  display: block;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ── Sidebar (app shell) ──────────────────────────────────────────── */
+.sidebar-link {
+  display: flex; align-items: center; gap: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem; font-weight: 500;
+  color: #64748b; cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.sidebar-link:hover { background: #f8fafc; color: var(--text); }
+.sidebar-link.active { background: #f1f5f9; color: var(--text); }
+
+/* ── Bank pill (logos) ────────────────────────────────────────────── */
+.bank-logo {
+  height: 64px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: white;
+  transition: border-color .15s, background .15s;
+  overflow: hidden;
+}
+.bank-logo:hover { border-color: #cbd5e1; background: #fcfcfd; }
+.bank-logo-img {
+  max-height: 36px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.92;
+  transition: opacity .2s;
+}
+.bank-logo:hover .bank-logo-img { opacity: 1; }
+
+/* Square avatar logo (job cards / job detail) */
+.avatar-logo-img {
+  max-width: 80%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+/* ── Questions / accordion ────────────────────────────────────────── */
+.question-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  background: white;
+  transition: border-color .15s;
+}
+.question-card:hover { border-color: #cbd5e1; }
+.question-card.open { border-color: var(--text); }
+
+/* ── Options (MCQ) ────────────────────────────────────────────────── */
+.option {
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  padding: 0.65rem 0.9rem;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+  font-size: 0.85rem;
+  background: white;
+}
+.option:hover { border-color: #94a3b8; }
+.option.selected { border-color: var(--text); background: #f8fafc; font-weight: 500; }
+.option.correct { border-color: #047857; background: #ecfdf5; color: #065f46; }
+.option.wrong   { border-color: #dc2626; background: #fef2f2; color: #991b1b; }
+
+/* ── Misc ─────────────────────────────────────────────────────────── */
+.fade-in { animation: fadeIn .2s ease-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.kbd {
+  display: inline-block;
+  border: 1px solid var(--border-strong);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.7rem;
+  color: #64748b;
+  background: white;
+}
+
+/* Subtle row hover for dense lists */
+.row-hover:hover { background: #fafbfd; }
+
+/* Stat block */
+.stat-num { font-size: 1.35rem; font-weight: 700; color: var(--text); letter-spacing: -0.03em; }
+.stat-label { font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; }
