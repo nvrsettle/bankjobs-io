@@ -1,0 +1,9 @@
+<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#071F49" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="190" cy="210" r="90"/>
+    <line x1="254" y1="274" x2="330" y2="350"/>
+  </g>
+  <path d="M166 150H214L205 170H175L166 150Z" fill="#071F49"/>
+  <path d="M176 182H204L218 259L190 282L162 259L176 182Z" fill="#071F49"/>
+  <text x="360" y="257" font-family="Inter, Arial, Helvetica, sans-serif" font-size="132" font-weight="800" fill="#071F49">BankJobs.io</text>
+</svg>

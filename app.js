@@ -792,9 +792,8 @@ function viewLogin() {
     <div class="bg-brand-900 text-white p-12 flex flex-col justify-center relative overflow-hidden">
       <div class="absolute inset-0 dot-pattern opacity-5"></div>
       <div class="relative max-w-md">
-        <div class="flex items-center gap-2 mb-10">
-          <div class="w-10 h-10 rounded-lg bg-white text-brand-700 grid place-items-center font-bold">B</div>
-          <span class="text-xl font-bold">BankJobs<span class="text-brand-300">.io</span></span>
+        <div class="mb-10">
+          <img src="bankjobs-logo.svg" alt="BankJobs.io" class="h-9 w-auto brightness-0 invert"/>
         </div>
         <h1 class="text-4xl font-extrabold leading-tight mb-4">Welcome to<br/>BankJobs.io</h1>
         <p class="text-brand-100 mb-10">Login / Signup to access thousands of Bank & BFSI Jobs, Tests and more.</p>
@@ -891,8 +890,7 @@ function appShell(active, content) {
     <!-- SIDEBAR -->
     <aside class="bg-white border-r border-slate-100 p-4 flex flex-col">
       <a href="#/" class="flex items-center gap-2 mb-7 px-2">
-        <div class="w-7 h-7 rounded-md bg-brand-600 text-white grid place-items-center text-sm font-bold">B</div>
-        <span class="text-[15px] font-bold tracking-tight text-slate-900">BankJobs<span class="text-brand-600">.io</span></span>
+        <img src="bankjobs-logo.svg" alt="BankJobs.io" class="h-7 w-auto"/>
       </a>
       <nav class="space-y-0.5 flex-1">
         ${[
